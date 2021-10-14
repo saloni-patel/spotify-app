@@ -1,21 +1,29 @@
 import React from 'react';
 import '../App.css';
-import { Container, Button, Card } from "react-bootstrap";
-// import { Link } from 'react-router-dom';
-import Categories from './Categories';
-
-
-const HomePage = () => {
-
+const Categories = () => {
+        const dataCategories = [{
+            id: 1,
+            name: 'Category 1'
+},
+{
+    id: 2,
+    name: 'Category 1'
+},
+{
+    id: 3,
+    name: 'Category 1'
+},
+{
+    id: 4,
+    name: 'Category 1'
+}
+]
 
     return (
-        <div className="main">
-            <div className="Header">
-                
-            </div>
-            <div className="mainContent">
-            {/* <Categories /> */}
-                <h4>The Top Podcasts Of 2021</h4>
+        <div>
+        {dataCategories.map(Categories =>{
+            <div>
+                            <h4>The Top Podcasts Of 2021</h4>
                 <span className="subText">SEE All</span>
                 <p className="subText">Our favorite new shows of the year</p>
                 
@@ -166,10 +174,12 @@ const HomePage = () => {
                         </div>
                     </div>
                  </div>
-            </div>
+                    </div>
+        })};
+                   
         </div>
-
+        
     )
 }
 
-export default HomePage
+export default Categories

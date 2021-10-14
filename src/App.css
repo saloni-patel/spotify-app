@@ -1,3 +1,10 @@
+.subText{
+  font-size: 0.8rem;
+  color: gray;
+  
+}
+
+
 .App{
  
   height: calc(100vh-90px);
@@ -10,6 +17,14 @@
   background:black;
   display: flex;
   flex-direction: column;
+}
+
+.divider{
+  width: 50%;
+  height: 1px;
+  border-radius: 1px;
+  background-color: gray;
+
 }
 
 ul{
@@ -29,12 +44,10 @@ ul li{
   font-weight: 700;
   cursor: pointer;
   padding: 7px;
-  
-
 
 }
 
-ul li.active{
+ul li .active{
   background: lightgray;
 }
 
@@ -43,7 +56,7 @@ color: white;
 }
 
 .outerWrap{
-  background: rgb(36, 35, 35);
+  background: rgb(26, 24, 24);
   height: 100vh;
   min-height: 100%;
 }
@@ -60,6 +73,29 @@ color: white;
   padding: 20px;
 }
 
+.SideBar .main-menu .menu-item{
+  color: grey;
+  text-decoration: none;
+  font-size: 15px ;
+  display: block;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 5px;
+  font-family: circular-bold;
+}
+
+
+.SideBar .main-menu .menu-item .menu-icons{
+  display: inline-block;
+  width: 70px;
+  height: 20px;
+  
+}
+
+/* .menu-icons .Home-active:active{
+  color:white
+} */
+
 .musicControls{
   background:rgb(32, 30, 30);
   text-align: center;
@@ -68,10 +104,15 @@ color: white;
   align-items: center;
   justify-content: center;
   color: white;
+  z-index: 2;
+  position: relative;
+  border-top:1px solid black;
+  
+  /* position: fixed; */
 }
 
 .Header{
-  background: rgb(12, 12, 12) ;
+  background: rgb(3, 3, 3);
   height: 56px;
   width: 100%;
   display: flex;
@@ -80,20 +121,55 @@ color: white;
   padding: 0.5rem 2rem;
 }
 
-.HomePage{
+.main{
   width:100%;
+  /* overflow-y: scroll ; */
 }
 
-.HomePage .mainContent{
+.main .mainContent{
     color: white;
     padding : 1rem 2rem;
 }
 
-.HomePage .h1{
+.main .h1{
   font-size: 1rem;
 }
-.HomePage .h6{
+.main .h6{
   font-size: 1rem;
   margin-top: 0%;
 }
+
+.cardWrap .card{
+  border-radius: 10px;
+  background: rgb(31, 30, 30);
+  padding: 20px 20px 20px 20px;
+  /* cursor: pointer; */
+  width: 200px;
+  overflow: hidden;
+  top: 15px;
+  padding-bottom: 2rem ;
+}
+
+.cardImage {
+    height: 130px;
+    width: 150%;
+}
+
+.cardImage img{
+  width: 65%;
+  height: 70%;
+  object-fit: cover;
+  
+}
+
+.card:not(.cardImage):hover{
+  background: rgb(47, 45, 45);
+
+}
+
+.cardContent .h6{
+  font-weight: 600;
+}
+
+
 
